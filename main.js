@@ -8,14 +8,14 @@ const selfBot = new FocaBotCore({
   selfBot:    true,
 
   // Prefix
-  prefix:     'me!',
+  prefix:     'pan!',
   // Prefix used by others
-  publicPrefix: 'sb!',
+  publicPrefix: 'pan!',
   // Put your token here
   token:      "mfa.0bn...",
 
   // For the !waifu command
-  waifuTag:   '', // danbooru tag
+  waifuTag:   'oshino_shinobu', // danbooru tag
 
   modulePath: path.join(__dirname, 'modules/'),
 });
