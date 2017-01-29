@@ -51,7 +51,7 @@ class DanbooruModule extends BotModule
         console.error e
         msg.channel.sendMessage 'Something went wrong.'
 
-    @registerCommand 'shinobu', { aliases: ['w'], allowDM: true }, (msg, args, d)=>
+    @registerCommand 'shinobu', { aliases: ['w', 'waifu'], allowDM: true }, (msg, args, d)=>
       return msg.channel.sendMessage 'Please edit `main.js` and set the `waifuTag`parameter,' if not Core.settings.waifuTag
       qs = {
         random: true
