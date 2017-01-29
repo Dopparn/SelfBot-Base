@@ -53,7 +53,15 @@ class ImageModule extends BotModule
 
     # Example command for custom image command.
     # Place the image files in the "images" folder.
-    @registerCommand 'example', { everyone: true }, (msg, args)=>
+    @registerCommand 'thknig', { everyone: true }, (msg, args)=>
       msg.channel.uploadFile fs.createReadStream("#{@images}/example.png"), 'example.png'
+    @registerCommand 'swdelet', { everyone: true }, (msg, args)=>
+      msg.channel.uploadFile fs.createReadStream("#{@images}/swdelet.jpg"), 'swdelet.jpg'
+    @registerCommand 'spooky', { everyone: true }, (msg, args)=>
+      msg.channel.uploadFile fs.createReadStream("#{@images}/spooky.png"), 'spooky.png'
+    @registerCommand 'nope', { everyone: true }, (msg, args)=>
+      msg.channel.uploadFile fs.createReadStream("#{@images}/nope.png"), 'nope.png'
+    @registerCommand 'delet', { everyone: true }, (msg, args)=>
+      msg.channel.uploadFile fs.createReadStream("#{@images}/delet.jpg"), 'delet.jpg'
 
 module.exports = ImageModule
