@@ -1,4 +1,4 @@
-# SelfBot-Base
+# SelfBot-Base - Shinobu Version
 
 This is a minimal SelfBot made using [FocaBotCore](https://github.com/FocaBot/FocaBotCore).
 It's based on my own SelfBot, but with some sensitive things changed and/or removed.
