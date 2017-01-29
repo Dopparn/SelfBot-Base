@@ -5,6 +5,9 @@ class SenderModule extends BotModule
     @registerCommand 'reverse', (msg, args)=>
       @sendOrEdit msg, args.split('').reverse().join('')
 
+    @registerCommand 'thinking', {everyone: true}, (msg)=>
+      msg.channel.sendMessage ":thinking: :thinking: :thinking: :thinking: :thinking:"
+
     @registerCommand 'slow', (msg, args)=>
       msg.edit args.substr(0,1)
       cnt = 1;

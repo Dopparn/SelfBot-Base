@@ -73,5 +73,7 @@ class ImageModule extends BotModule
       msg.channel.uploadFile fs.createReadStream("#{@images}/melon.jpg"), 'melon.jpg', 'Have a bread!'
     @registerCommand 'baguette', { everyone: true }, (msg, args)=>
       msg.channel.uploadFile fs.createReadStream("#{@images}/baguette.jpg"), 'baguette.jpg', 'Have a bread!'
+    @registerCommand 'pomf', { everyone: true }, (msg, args)=>
+      msg.channel.uploadFile fs.createReadStream("#{@images}/pomf.jpg"), 'pomf.jpg', 'POMF =3'
 
 module.exports = ImageModule
