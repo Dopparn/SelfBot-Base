@@ -51,19 +51,19 @@ class DanbooruModule extends BotModule
         console.error e
         msg.channel.sendMessage 'Something went wrong.'
 
-    @registerCommand 'waifu', { aliases: ['w'], allowDM: true }, (msg, args, d)=>
+    @registerCommand 'shinobu', { aliases: ['w'], allowDM: true }, (msg, args, d)=>
       return msg.channel.sendMessage 'Please edit `main.js` and set the `waifuTag`parameter,' if not Core.settings.waifuTag
       qs = {
         random: true
         tags: 'solo ' + Core.settings.waifuTag
       }
-      safebooru.get '/posts.json', { json: true, qs }
+      danbooru.get '/posts.json', { json: true, qs }
       .then (r)=>
         if r.length
-          url = "https://safebooru.donmai.us#{r[0].file_url}"
+          url = "https://danbooru.donmai.us#{r[0].file_url}"
           msg.channel.sendMessage '', false, {
             title: '[click for sauce]'
-            url: "https://safebooru.donmai.us/posts/#{r[0].id}"
+            url: "https://danbooru.donmai.us/posts/#{r[0].id}"
             image: { url }
           }
         else
