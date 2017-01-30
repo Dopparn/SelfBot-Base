@@ -1,4 +1,4 @@
-# Everything's' ported from FocaBot
+# Everything's ported from FocaBot
 Chance = require 'chance'
 
 class RNGModule extends BotModule
