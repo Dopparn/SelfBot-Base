@@ -28,7 +28,6 @@ It's meant to be extended, and it's pretty easy to make your own modules. Some b
 - Open a command prompt in the same folder as the main.js file (`Shit+Right Click > Open Command Prompt` in Windows).
   - Type the following commands:
     - `npm install`
-    - `npm install --save chance`
     - `npm start`
 - Your SelfBot should now be running! Test it typing `me!ping` in any Discord chat. (assuming your prefix is `me!`).
 - Your SelfBot will keep running as long as you leave CMD open, if you want to start it again, only `npm start` will be necessary.
