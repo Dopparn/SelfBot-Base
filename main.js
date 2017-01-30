@@ -21,7 +21,7 @@ const selfBot = new FocaBotCore({
 });
 
 // Load the modules.
-selfBot.modules.load(['ping', 'danbooru', 'image', 'msgs', 'ping', 'poll', 'seal', 'statics', 'status']);
+selfBot.modules.load(['ping', 'danbooru', 'image', 'msgs', 'ping', 'poll', 'seal', 'statics', 'status', 'rng']);
 
 // Connect to discord
 selfBot.establishConnection();
