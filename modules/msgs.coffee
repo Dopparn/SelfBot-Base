@@ -1,6 +1,4 @@
 aesthetics = require 'aesthetics'
-uniqueRandomArray = require('unique-random-array');
-rand = uniqueRandomArray([""]); #Add baits here
 
 class SenderModule extends BotModule
   init:=>
@@ -10,8 +8,6 @@ class SenderModule extends BotModule
     @registerCommand 'thinking', {everyone: true}, (msg)=>
       msg.channel.sendMessage ":thinking: :thinking: :thinking: :thinking: :thinking:"
       
-    @registerCommand 'bait', {everyone: true}, (msg)=>
-      msg.channel.sendMessage rand()
 
     @registerCommand 'slow', (msg, args)=>
       msg.edit args.substr(0,1)
