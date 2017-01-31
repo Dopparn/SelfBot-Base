@@ -5,12 +5,12 @@ class RNGModule extends BotModule
   init: =>
     @chance = new Chance
 
-    @registerCommand 'roll', (msg, args)=>
+    @registerCommand 'roll', {everyone: true}, (msg, args)=>
       max = parseInt(args) or 100
       result = @chance.integer {min: 0, max}
       msg.channel.sendMessage "#{msg.author.mention} 🎲 rolls **#{result}/#{max}**."
 
-    @registerCommand 'choose', { argSeparator: ';' }, (msg, args)=>
+    @registerCommand 'choose', {everyone: true, argSeparator: ';'}, (msg, args)=>
       if args.length < 2
         msg.reply 'Not enough items to choose from. Remember to use `;` to separate them.'
       else
@@ -40,7 +40,7 @@ class RNGModule extends BotModule
       "20"
     ]
 
-    @registerCommand 'rate', (msg, args)=>
+    @registerCommand 'rate', {everyone: true}, (msg, args)=>
       return if not args
       for i in [0 ... args.length]
         chr   = args.charCodeAt(i)

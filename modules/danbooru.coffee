@@ -11,7 +11,7 @@ safebooru = require('request-promise').defaults {
 
 class DanbooruModule extends BotModule
   init: =>
-    @registerCommand 'danbooru', { allowDM: true, aliases: ['d'] }, (msg, tags)=>
+    @registerCommand 'danbooru', { everyone: true, allowDM: true, aliases: ['d'] }, (msg, tags)=>
       qs = {
         random: true
         tags
@@ -31,7 +31,7 @@ class DanbooruModule extends BotModule
         console.error e
         msg.channel.sendMessage 'Something went wrong.'
 
-    @registerCommand 'safebooru', { allowDM: true, aliases: ['safe'] }, (msg, tags, d)=>
+    @registerCommand 'safebooru', { everyone: true, allowDM: true, aliases: ['safe'] }, (msg, tags, d)=>
       qs = {
         random: true
         tags

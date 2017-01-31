@@ -2,14 +2,14 @@ aesthetics = require 'aesthetics'
 
 class SenderModule extends BotModule
   init:=>
-    @registerCommand 'reverse', (msg, args)=>
+    @registerCommand 'reverse', {everyone: true}, (msg, args)=>
       @sendOrEdit msg, args.split('').reverse().join('')
 
     @registerCommand 'thinking', {everyone: true}, (msg)=>
       msg.channel.sendMessage ":thinking: :thinking: :thinking: :thinking: :thinking:"
       
 
-    @registerCommand 'slow', (msg, args)=>
+    @registerCommand 'slow', {everyone: true}, (msg, args)=>
       msg.edit args.substr(0,1)
       cnt = 1;
       int = setInterval =>
@@ -30,7 +30,7 @@ class SenderModule extends BotModule
     @registerCommand 'aesthetic', {everyone: true}, (msg,args)=>
       @sendOrEdit msg, aesthetics(args)
 
-    @registerCommand 'em', { argSeparator: '|' }, (msg, args)=>
+    @registerCommand 'em', {everyone: true, argSeparator: '|'}, (msg, args)=>
       color = 0xAAFF00
       description = args[0]
       author = undefined

@@ -53,39 +53,39 @@ class ImageModule extends BotModule
 
     # Example command for custom image command.
     # Place the image files in the "images" folder.
-    @registerCommand 'thknig', { everyone: true }, (msg, args)=>
+    @registerCommand 'thknig', {everyone: true}, (msg, args)=>
       msg.channel.uploadFile fs.createReadStream("#{@images}/example.png"), 'example.png'
-    @registerCommand 'swdelet', { everyone: true }, (msg, args)=>
+    @registerCommand 'swdelet', {everyone: true}, (msg, args)=>
       msg.channel.uploadFile fs.createReadStream("#{@images}/swdelet.jpg"), 'swdelet.jpg'
-    @registerCommand 'spooky', { everyone: true }, (msg, args)=>
+    @registerCommand 'spooky', {everyone: true}, (msg, args)=>
       msg.channel.uploadFile fs.createReadStream("#{@images}/spooky.png"), 'spooky.png'
-    @registerCommand 'nope', { everyone: true }, (msg, args)=>
+    @registerCommand 'nope', {everyone: true}, (msg, args)=>
       msg.channel.uploadFile fs.createReadStream("#{@images}/nope.png"), 'nope.png'
-    @registerCommand 'delet', { everyone: true }, (msg, args)=>
+    @registerCommand 'delet', {everyone: true}, (msg, args)=>
       msg.channel.uploadFile fs.createReadStream("#{@images}/delet.jpg"), 'delet.jpg'
-    @registerCommand 'sweet', { everyone: true }, (msg, args)=>
+    @registerCommand 'sweet', {everyone: true}, (msg, args)=>
       msg.channel.uploadFile fs.createReadStream("#{@images}/sweet.jpg"), 'sweet.jpg', 'Have a bread!'
-    @registerCommand 'italian', { everyone: true }, (msg, args)=>
+    @registerCommand 'italian', {everyone: true}, (msg, args)=>
       msg.channel.uploadFile fs.createReadStream("#{@images}/italian.jpg"), 'italian.jpg', 'Have a bread!'
-    @registerCommand 'pita', { everyone: true }, (msg, args)=>
+    @registerCommand 'pita', {everyone: true}, (msg, args)=>
       msg.channel.uploadFile fs.createReadStream("#{@images}/pita.jpg"), 'pita.jpg', 'Have a bread!'
-    @registerCommand 'melon', { everyone: true }, (msg, args)=>
+    @registerCommand 'melon', {everyone: true}, (msg, args)=>
       msg.channel.uploadFile fs.createReadStream("#{@images}/melon.jpg"), 'melon.jpg', 'Have a bread!'
-    @registerCommand 'baguette', { everyone: true }, (msg, args)=>
+    @registerCommand 'baguette', {everyone: true}, (msg, args)=>
       msg.channel.uploadFile fs.createReadStream("#{@images}/baguette.jpg"), 'baguette.jpg', 'Have a bread!'
-    @registerCommand 'pomf', { everyone: true }, (msg, args)=>
+    @registerCommand 'pomf', {everyone: true}, (msg, args)=>
       msg.channel.uploadFile fs.createReadStream("#{@images}/pomf.jpg"), 'pomf.jpg', 'POMF =3'
-    @registerCommand 'pomfsmile', { everyone: true }, (msg, args)=>
+    @registerCommand 'pomfsmile', {everyone: true}, (msg, args)=>
       msg.channel.uploadFile fs.createReadStream("#{@images}/pomfsmile.jpg"), 'pomfsmile.jpg'
-    @registerCommand 'pomfhappy', { everyone: true }, (msg, args)=>
+    @registerCommand 'pomfhappy', {everyone: true}, (msg, args)=>
       msg.channel.uploadFile fs.createReadStream("#{@images}/pomfhappy.png"), 'pomfhappy.png'
-    @registerCommand 'pomfrice', { everyone: true }, (msg, args)=>
+    @registerCommand 'pomfrice', {everyone: true}, (msg, args)=>
       msg.channel.uploadFile fs.createReadStream("#{@images}/pomfrice.jpg"), 'pomfrice.jpg'
-    @registerCommand 'pomfsmile2', { everyone: true }, (msg, args)=>
+    @registerCommand 'pomfsmile2', {everyone: true}, (msg, args)=>
       msg.channel.uploadFile fs.createReadStream("#{@images}/pomfsmile2.jpg"), 'pomfsmile2.jpg'
-    @registerCommand 'pomfsnow', { everyone: true }, (msg, args)=>
+    @registerCommand 'pomfsnow', {everyone: true}, (msg, args)=>
       msg.channel.uploadFile fs.createReadStream("#{@images}/pomfsnow.jpg"), 'pomfsnow.jpg'
-    @registerCommand 'pomfbread', { everyone: true }, (msg, args)=>
+    @registerCommand 'pomfbread', {everyone: true}, (msg, args)=>
       msg.channel.uploadFile fs.createReadStream("#{@images}/pomfbread.jpg"), 'pomfbread.jpg'
 
 module.exports = ImageModule
